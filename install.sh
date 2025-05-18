@@ -1,10 +1,10 @@
 #!/bin/bash
 
 echo "Aktualizuję listę pakietów..."
-apt update -qq > /dev/null
+apt-get update -qq > /dev/null
 
 echo "Instaluję python3 i virtualenv..."
-apt install -y python3 python3-venv > /dev/null
+apt-get install -y python3 python3-venv > /dev/null
 
 echo "Tworzę katalog aplikacji..."
 mkdir -p /opt/chat
@@ -19,7 +19,7 @@ python3 -m venv venv > /dev/null
 
 echo "Instaluję zależności..."
 /opt/chat/venv/bin/pip install --upgrade pip
-/opt/chat/venv/bin/pip install -r requirements.txt
+/opt/chat/venv/bin/pip install -r requirements.txt > /dev/null
 
 echo "Tworzę skrót do uruchomienia aplikacji..."
 cat << 'EOF' > /usr/local/bin/chat
