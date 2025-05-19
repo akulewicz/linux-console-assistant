@@ -25,7 +25,7 @@ Asystent do pracy z konsolą Linuksa oparty na OpenAI API. Możesz zadawać pyta
 1. Sklonuj repozytorium:
    ```bash
    git clone https://github.com/akulewicz/linux-console-assistant.git
-   cd console-linux-assistant
+   cd linux-console-assistant
    ```
 
 2. Uczyń skrypt instalacyjny wykonywalnym:
