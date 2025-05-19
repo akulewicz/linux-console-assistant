@@ -24,7 +24,10 @@ cd /opt/chat
 
 read -p "🔑 Podaj OPENAI API KEY: " API_KEY
 echo "OPENAI_API_KEY=$API_KEY" > /opt/chat/.env
-chmod 600 /opt/chat/.env
+
+chown "$SUDO_USER":"$SUDO_USER" .env
+chmod 600 .env
+
 
 echo "🔧 Tworzę środowisko wirtualne..."
 python3 -m venv venv > /dev/null
